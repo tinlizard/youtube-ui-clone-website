@@ -26,22 +26,77 @@
 .navbar a {
   text-decoration: none;
 }
-.searchbar {
-  max-width: fit-content;
+
+.search-container-top {
+  display: flex;
+}
+
+.yap-tube-icon {
+  padding-top: 2%;
+}
+
+.search-container {
+  margin-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  height: 5%; 
+  margin-left: 30%; 
+  margin-right: 30%;
+}
+
+.searchbar {  
+  display: flex;
   margin-inline: auto;
   padding-right: 50%;
 }
 
-.searchbar input {
-  border-radius: 5px;
-  width: 120%;
-  height: 250%;
+
+
+.searchbar-input-div{
+  outline: none;
+  background-color: blue;
+  opacity: 0.8;
+  margin-top: 5%;
+  width: 80%;
+  height: 50%;
+  padding: 10%;
+  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.searchbar button {
-  margin-left: 130%;
+.searchbar-input-div input {
+  border-radius: 30%;
+}
+
+.searchbar-input-div input:focus {
+  outline: none;
+}
+
+.searchbar-button-div button {
+  font-size: 70%;
+  padding: 5%;
+  border-radius: 70%;
   font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+.searchbar-button-div {
+  margin-right: 30%;
+  padding: 10%;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+}
+
+.visibility-button button {
+  outline: none;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 body{

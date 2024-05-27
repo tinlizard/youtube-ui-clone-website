@@ -1,6 +1,9 @@
+"use client"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function Navbar(){
+    const [isNavVisible,setIsNavVisible] = useState(false)
     interface NavItem {
         id: number,
         text: string,
@@ -11,11 +14,27 @@ export default function Navbar(){
 
     const navItems = navbar.map((item,index) => <Link href={hrefs[index]} key={item.id}><li key={item.id}>{item.text}</li></Link>)
 
-    return(
-        <div className="navbar">
-            <ul>
-                {navItems}
-            </ul>
-        </div>
-    )
+    if (isNavVisible){
+        return(
+            <>
+                <div className="navbar">
+                    <ul>
+                        <li>
+                            <div className="visibility-button">
+                                <button onClick={()=>setIsNavVisible(!isNavVisible)}>Toggle visible</button>
+                            </div>
+                        </li>
+                        {navItems}
+                    </ul>
+                </div>
+            </>
+        )
+    }
+    else{
+        return(
+            <div className="visibility-button">
+                <button onClick={()=>setIsNavVisible(!isNavVisible)}>Toggle visible</button>
+            </div>
+        )
+    }
 }
